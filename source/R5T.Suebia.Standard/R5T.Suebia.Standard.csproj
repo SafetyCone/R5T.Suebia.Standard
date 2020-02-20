@@ -7,5 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.Alamania.Standard\source\R5T.Alamania.Standard\R5T.Alamania.Standard.csproj" />
     <ProjectReference Include="..\..\..\R5T.Suebia.Alamania\source\R5T.Suebia.Alamania\R5T.Suebia.Alamania.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Suebia.Default\source\R5T.Suebia.Default\R5T.Suebia.Default.csproj" />
   </ItemGroup>
 </Project>
