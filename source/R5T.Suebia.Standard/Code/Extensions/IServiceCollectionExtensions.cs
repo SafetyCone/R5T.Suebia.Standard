@@ -36,11 +36,11 @@ namespace R5T.Suebia.Standard
         }
 
         /// <summary>
-        /// Adds the <see cref="ISecretsFilePathProvider"/> service.
+        /// Adds the <see cref="ISecretsDirectoryFilePathProvider"/> service.
         /// </summary>
-        public static IServiceCollection AddSecretsFilePathProvider(this IServiceCollection services)
+        public static IServiceCollection AddSecretsDirectoryFilePathProvider(this IServiceCollection services)
         {
-            services.AddDefaultSecretsFilePathProvider(
+            services.AddDefaultSecretsDirectoryFilePathProvider(
                 services.AddSecretsDirectoryPathProviderAction(),
                 services.AddStringlyTypedPathOperatorAction());
 
@@ -48,11 +48,11 @@ namespace R5T.Suebia.Standard
         }
 
         /// <summary>
-        /// Adds the <see cref="ISecretsFilePathProvider"/> service.
+        /// Adds the <see cref="ISecretsDirectoryFilePathProvider"/> service.
         /// </summary>
-        public static ServiceAction<ISecretsFilePathProvider> AddSecretsFilePathProviderAction(this IServiceCollection services)
+        public static ServiceAction<ISecretsDirectoryFilePathProvider> AddSecretsDirectoryFilePathProviderAction(this IServiceCollection services)
         {
-            var serviceAction = new ServiceAction<ISecretsFilePathProvider>(() => services.AddSecretsFilePathProvider());
+            var serviceAction = new ServiceAction<ISecretsDirectoryFilePathProvider>(() => services.AddSecretsDirectoryFilePathProvider());
             return serviceAction;
         }
     }
