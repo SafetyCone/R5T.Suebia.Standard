@@ -19,11 +19,12 @@ namespace R5T.Suebia.Standard
         /// </summary>
         public static IServiceCollection AddSecretsDirectoryPathProvider(this IServiceCollection services)
         {
-            services.AddRivetOrganizationSecretsDirectoryPathProvider(
+            services.AddRivetOrganizationSecretsDirectoryPathProvider_Old(
                 services.AddRivetOrganizationDirectoryPathProviderAction(),
                 services.AddStringlyTypedPathOperatorAction());
 
-            services.ForwardRivetOrganizationSecretsDirectoryPathProviderAsSecretsDirectoryPathProvider(ServiceAction<IRivetOrganizationSecretsDirectoryPathProvider>.AlreadyAdded);
+            services.ForwardRivetOrganizationSecretsDirectoryPathProviderAsSecretsDirectoryPathProvider_Old(
+                ServiceAction<IRivetOrganizationSecretsDirectoryPathProvider>.AlreadyAdded);
 
             return services;
         }
@@ -42,7 +43,7 @@ namespace R5T.Suebia.Standard
         /// </summary>
         public static IServiceCollection AddSecretsDirectoryFilePathProvider(this IServiceCollection services)
         {
-            services.AddSecretsDirectoryFilePathProvider(
+            services.AddSecretsDirectoryFilePathProvider_Old(
                 services.AddSecretsDirectoryPathProviderAction(),
                 services.AddStringlyTypedPathOperatorAction());
 
